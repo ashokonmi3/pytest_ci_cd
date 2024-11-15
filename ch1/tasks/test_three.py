@@ -13,7 +13,7 @@ def test_defaults():
     t1 = Task()
     t2 = Task(None, None, False, None)
     assert t1 == t2
-    time.sleep(4)
+    # time.sleep(4)
 
     print("[Finished] Executing the test_defaults ")
 
@@ -27,6 +27,6 @@ def test_member_access():
     assert t.summary == 'buy milk'
     assert t.owner == 'brian'
     assert (t.done, t.id) == (False, None)
-    time.sleep(5)
+    # time.sleep(5)
 
     print("[Finished] Executing the test_member_access ")

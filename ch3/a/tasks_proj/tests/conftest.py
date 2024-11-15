@@ -9,14 +9,14 @@ from tasks import Task
 def tasks_db(tmpdir):
     """Connect to db before tests, disconnect after."""
     # Setup : start db
-    print("Connect to db before tests")
+    print("\n Connect to db before tests")
     tasks.start_tasks_db(str(tmpdir), "tiny")
 
     yield  # this is where the testing happens
 
     # Teardown : stop db
     tasks.stop_tasks_db()
-    print("Disconnect to db after tests")
+    print("\n Disconnect to db after tests")
 
 
 # Reminder of Task constructor interface

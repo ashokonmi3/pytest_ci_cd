@@ -81,11 +81,11 @@ def test_add_4(task):
     assert equivalent(t_from_db, task)
 
 
-# task_ids = ["Task({},{},{})".format(t.summary, t.owner, t.done)
-#             for t in tasks_to_try]
-task_ids = [1, 2, 3, 4, 5]
+task_ids = ["Task({},{},{})".format(t.summary, t.owner, t.done)
+            for t in tasks_to_try]
+# task_ids = [1, 2, 3, 4, 5]
 
-task_ids = ["first", "second", "third", "fourth", "fifth"]
+# task_ids = ["first", "second", "third", "fourth", "fifth"]
 
 
 @pytest.mark.parametrize("task", tasks_to_try, ids=task_ids)

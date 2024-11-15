@@ -11,7 +11,9 @@ def check_duration(request, cache):
     yield
     stop_time = datetime.datetime.now()
     this_duration = (stop_time - start_time).total_seconds()
+    print(f"\nThis duration {this_duration}")
     last_duration = cache.get(key, None)
+    print(f"\n Last duration {last_duration}")
     cache.set(key, this_duration)
     if last_duration is not None:
         errorstring = "test duration over 2x last duration"

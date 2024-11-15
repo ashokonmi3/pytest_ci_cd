@@ -22,7 +22,8 @@ def test_greeting(capsys):
 
 def yikes(problem):
     print("YIKES! {}".format(problem), file=sys.stderr)
-
+# file = sys.stderr directs the output to the standard error stream instead of the standard output stream(stdout). 
+# This means the message will be sent to stderr, which is usually displayed on the console or logged separately from normal program output.
 
 def test_yikes(capsys):
     yikes("Out of coffee!")

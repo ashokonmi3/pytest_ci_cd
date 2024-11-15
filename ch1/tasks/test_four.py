@@ -1,5 +1,5 @@
 """Test the Task data type."""
-
+import pytest
 from collections import namedtuple
 import time
 
@@ -15,16 +15,17 @@ def test_asdict():
                 'owner': 'okken',
                 'done': True,
                 'id': 21}
-    time.sleep(2)
+    # time.sleep(2)
     assert t_dict == expected
 
 
+@pytest.mark.smoke
 def test_replace():
     """replace() should change passed in fields."""
     t_before = Task('finish book', 'brian', False)
     t_after = t_before._replace(id=10, done=True)
-    t_expected = Task('finish book', 'brian', True, 10)
-    time.sleep(3)
+    t_expected = Task('finish book', 'brian', True, 11)
+    # time.sleep(3)
 
     assert t_after == t_expected
 
